@@ -14,7 +14,7 @@ export type CategoryColumn = {
 
 export const columns: ColumnDef<CategoryColumn>[] = [
   {
-    accessorKey: "Name",
+    accessorKey: "name",
     header: ({ column }) => {
       return (
         <Button
@@ -26,9 +26,10 @@ export const columns: ColumnDef<CategoryColumn>[] = [
         </Button>
       );
     },
+    cell: ({ row }) => row.original.name,
   },
   {
-    accessorKey: "billboard",
+    accessorKey: "billboardLabel",
     header: ({ column }) => {
       return (
         <Button
